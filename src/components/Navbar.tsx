@@ -48,7 +48,7 @@ const Navbar = () => {
             <img
   src={logo}
   alt="AggregateCo Logo"
-  className="h-40 w-auto object-contain"
+  className="h-20 w-auto object-contain"
 />
             </button>
           </div>
