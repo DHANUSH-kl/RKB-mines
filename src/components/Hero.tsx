@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Construction site with aggregates"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[70%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       </div>
@@ -28,7 +28,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
         <div className="max-w-4xl animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Building Foundations <br />
             <span className="text-primary">That Last.</span>
           </h1>

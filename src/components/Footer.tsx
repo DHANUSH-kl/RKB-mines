@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-2xl font-bold">
-              <span className="text-primary">Aggregate</span>Co.
+              RKB<span className="text-primary">Mines</span>
             </p>
             <p className="text-sm text-background/70 mt-1">
               Building Foundations That Last
@@ -14,7 +14,7 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <p className="text-sm text-background/70">
-              © {new Date().getFullYear()} AggregateCo. All rights reserved.
+              © {new Date().getFullYear()} RKBMines. All rights reserved.
             </p>
             <p className="text-sm text-background/70 mt-1">
               Quality Materials • Reliable Service • On-Time Delivery
