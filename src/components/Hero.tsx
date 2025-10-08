@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/hero-construction.jpg";
+import heroImage from "@/assets/heroimg.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -29,8 +29,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
         <div className="max-w-4xl animate-fade-in">
           <h1 className="text-4xl sm:text-xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Building Foundations <br />
-            <span className="text-primary">That Last.</span>
+             Where rocks meet <br />
+            <span className="text-primary">resilience</span>
           </h1>
           
           <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl leading-relaxed">
