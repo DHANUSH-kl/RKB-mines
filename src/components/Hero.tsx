@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Construction site with aggregates"
-          className="w-full h-full object-cover object-[60%]"
+          className="w-full h-full object-cover object-[50%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       </div>
