@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroImage from "@/assets/heroimg.jpg";
+import heroImage from "@/assets/aboutimg.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Construction site with aggregates"
-          className="w-full h-full object-cover object-[70%]"
+          className="w-full h-full object-cover object-[60%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       </div>
@@ -28,10 +28,14 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
         <div className="max-w-4xl animate-fade-in">
-          <h1 className="text-4xl sm:text-xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-             Where rocks meet <br />
-            <span className="text-primary">resilience</span>
-          </h1>
+          <h1
+  className="text-4xl sm:text-xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+  style={{ fontFamily: "Times New Roman, Times, serif" }}
+>
+  Where rocks meet <br />
+  <span className="text-primary">Resilience</span>
+</h1>
+
           
           <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl leading-relaxed">
             Your trusted partner for high-quality aggregates, M-Sand, P-Sand, and reliable 

@@ -1,6 +1,6 @@
 import { CheckCircle2, Users, Settings, Leaf, Clock } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import aboutImage from "@/assets/aboutimg.jpg";
+import aboutImage from "@/assets/heroimg.jpg";
 
 const About = () => {
   const highlights = [
