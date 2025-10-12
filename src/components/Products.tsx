@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import aggregatesimg from "@/assets/aggregates.jpg";
+import msandimg from "@/assets/msand.jpg";
+import psandimg from "@/assets/psand.jpg";
+import roadconstructionimg from "@/assets/roadcosntruction.jpg";
 
 const Products = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,28 +13,27 @@ const Products = () => {
   const products = [
     {
       title: "Aggregates",
-      description: "Various construction aggregates suitable for concrete, foundations, roads, and plastering:",
-      items: [
-        { name: "20mm Aggregates", info: "Ideal for concrete mix, foundations, and RCC structures." },
-        { name: "40mm Aggregates", info: "Used for base layers, drainage, and road work." },
-        { name: "6mm & 12mm Aggregates", info: "For finer concrete applications and plastering." },
-      ],
-      image: "🏗️",
+      description:
+        "High-quality aggregates suitable for concrete, foundations, and road work.",
+      image: aggregatesimg,
     },
     {
       title: "Manufactured Sand (M-Sand)",
-      description: "Engineered to replace river sand with superior consistency and strength. Environmentally friendly alternative.",
-      image: "🏔️",
+      description:
+        "Engineered to replace river sand — providing strength, consistency, and eco-friendliness.",
+      image: msandimg,
     },
     {
       title: "Plastering Sand (P-Sand)",
-      description: "Finely processed sand for smooth, crack-free finishes. Ideal for wall plastering and finishing work.",
-      image: "🧱",
+      description:
+        "Fine sand for smooth finishes, perfect for plastering and final surface work.",
+      image: psandimg,
     },
     {
-      title: "Contract-Based Road Construction",
-      description: "We build durable roads using top-grade materials and expert execution. Complete turnkey solutions.",
-      image: "🛣️",
+      title: "Road Construction",
+      description:
+        "We deliver durable road solutions with top-grade materials and expert execution.",
+      image: roadconstructionimg,
     },
   ];
 
@@ -59,7 +62,7 @@ const Products = () => {
             Our Products & Services
           </h2>
           <p className="text-lg text-muted-foreground">
-            We offer a wide range of construction-grade materials and services that meet diverse project requirements.
+            Explore our premium construction materials and turnkey road solutions.
           </p>
         </div>
 
@@ -69,33 +72,30 @@ const Products = () => {
             {getVisibleProducts().map((product, index) => (
               <Card
                 key={index}
-                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-background"
+                className="relative overflow-hidden rounded-2xl group h-[420px] shadow-lg hover:shadow-2xl transition-all duration-500"
               >
-                <CardHeader>
-                  <div className="text-6xl mb-4">{product.image}</div>
-                  <CardTitle className="text-2xl">{product.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed mb-2">
-                    {product.description}
-                  </CardDescription>
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${product.image})`,
+                  }}
+                ></div>
 
-                  {/* If product has multiple items (aggregates), render as list */}
-                  {product.items && (
-                    <ul className="list-disc pl-5 space-y-1 mt-2">
-                      {product.items.map((item, idx) => (
-                        <li key={idx}>
-                          <span className="font-semibold">{item.name}:</span> {item.info}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </CardContent>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                {/* Text at Bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
+                  <p className="text-sm text-gray-200 leading-relaxed">
+                    {product.description}
+                  </p>
+                </div>
               </Card>
             ))}
           </div>
 
-          {/* Carousel Navigation */}
+          {/* Navigation Buttons */}
           <div className="flex items-center justify-end gap-4">
             <Button
               variant="outline"
@@ -136,25 +136,19 @@ const Products = () => {
           {products.map((product, index) => (
             <Card
               key={index}
-              className="hover:shadow-xl transition-all duration-300 bg-background"
+              className="relative overflow-hidden rounded-2xl group h-[360px]"
             >
-              <CardHeader>
-                <div className="text-5xl mb-4">{product.image}</div>
-                <CardTitle className="text-xl">{product.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="leading-relaxed mb-2">{product.description}</CardDescription>
-
-                {product.items && (
-                  <ul className="list-disc pl-5 space-y-1 mt-2">
-                    {product.items.map((item, idx) => (
-                      <li key={idx}>
-                        <span className="font-semibold">{item.name}:</span> {item.info}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </CardContent>
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${product.image})`,
+                }}
+              ></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                <h3 className="text-xl font-bold mb-1">{product.title}</h3>
+                <p className="text-sm text-gray-200">{product.description}</p>
+              </div>
             </Card>
           ))}
         </div>
