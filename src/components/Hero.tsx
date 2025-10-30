@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import heroVideo from "../public/herovid.mp4"; // 👈 import your video
+import heroVideo from "../public/hero2.mp4"; // 👈 import your video
 
 const Hero = () => {
   const scrollToContact = () => {
